@@ -21,14 +21,14 @@ d = b * b - 4 * a * c
 if d > 0
   x1 = ((- b + Math.sqrt(d)) / (2*a)).round(4)
   x2 = ((- b - Math.sqrt(d)) / (2*a)).round(4)
-  puts "Дискриминант D = #{d}. x1 = #{x1} и x2 = #{x2}"
+  puts "Discriminant D = #{d}. x1 = #{x1} and x2 = #{x2}"
   
 # условие для совпадающих корней (один корень)
 elsif d == 0
   x = ((- b) / (2*a)).round(4)
-  puts "Дискриминант D = #{d}. x = #{x}"
+  puts "Discriminant D = #{d}. x = #{x}"
   
 # условие, если корни отсутствуют
 else
-  puts "Дискриминант D = #{d}. Корней нет."
+  puts "Discriminant D = #{d}. No roots."
 end
