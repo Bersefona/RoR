@@ -2,37 +2,36 @@
 # СУММА ПОКУПОК
 ##
 
-# создание хеша
+# Создание хеша
 list = Hash.new
 
-# итоговая сумма
+# Итоговая сумма
 total = 0
 
 loop do
-  print "Название товара: "
+  print "Product name: "
   product = gets.chomp
   
-  # условие выхода
   break if product == "stop"
   
-  # цена за единицу товара
-  print "Цена: "
+  # Цена за единицу товара
+  print "Price: "
   price = gets.to_f
   
   # Количество купленного товара:
-  print "Количество: "
+  print "Quantity: "
   count = gets.to_f
 
   list[product] = { "price" => price, "count" => count}
-  puts "Итоговая сумма за данный товар: #{price * count}"
+  puts "Total cost for the product: #{price * count}"
   puts "---------------------------------------"
 end
 
-# подсчёт итоговой суммы за все товары
+# Подсчёт итоговой суммы за все товары
 list.each do |product, hash|
   total += hash["price"] * hash["count"]
 end
 
 puts list
 
-puts "Итоговая сумма за все товары: #{total}"
+puts "Total cost for all products: #{total}"
